@@ -1,0 +1,141 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #007bff, #1e90ff);
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+
+
+/* Main content section styles */
+main {
+    padding: 50px 30px;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Fade-in effect for each section */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Instructions list */
+ol, ul {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+ol li, ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+a.reference-link {
+    color: #007bff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.reference-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .cta-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
