@@ -2,19 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fade-in effect for sections
     const fadeInElements = document.querySelectorAll('.fade-in');
     const options = {
-        threshold: 0.5,
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15,
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, 100);
                 observer.unobserve(entry.target);
             }
         });
     }, options);
 
-    fadeInElements.forEach(el => observer.observe(el));
+    fadeInElements.forEach(el => {
+        el.classList.remove('visible');
+        observer.observe(el);
+    });
 
   
     // Add dynamic footer year
